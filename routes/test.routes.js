@@ -1,9 +1,11 @@
-import { Router } from "express";
-import { postTest, putTest } from "../controllers/test.controller.js";
+import { response, Router } from "express";
 
 const router = Router()
-
-router.post('/hi', postTest)
-router.put('/hi', putTest)
+router.get('/products', (request, response) => {
+    response.send('Funciona ')
+})
+router.delete('/hi', (request, response) => {
+    response.send('hillos ')
+})
 
 export default router
